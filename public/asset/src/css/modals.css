@@ -1,0 +1,148 @@
+/* ===== Modal Settings ===== */
+.settingsModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.65);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  overflow: hidden;
+}
+.settingsModal.show {
+  display: flex;
+}
+
+/* Container interno */
+.settingsModal .modalContent {
+  width: 80%;
+  max-width: 1000px;
+  height: 80%;
+  background-color: var(--col-02-2);
+  border-radius: 16px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: var(--shadown-header);
+}
+.modalSidebar ion-icon {
+  font-size: 1.1rem;
+}
+/* Menu lateral 30% */
+.settingsModal .modalSidebar {
+  width: 30%;
+  background-color: var(--col-02);
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.settingsModal .modalSidebar button {
+  padding: 10px 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 14px;
+  background: none;
+  border: none;
+  color: var(--col-01);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: var(ani-01);
+}
+.settingsModal .modalSidebar button:hover {
+  background: var(--text-hover);
+  color: var(--col-03);
+}
+
+/* Conteúdo 70% */
+.settingsModal .modalSection {
+  width: 70%;
+  padding: 20px 25px;
+  overflow-y: auto;
+}
+
+.settingsModal .modalSection h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--col-01);
+  margin-bottom: 20px;
+}
+.settingsModal .modalSection .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.settingsModal .modalSection .form-group label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 5px;
+}
+
+.settingsModal .modalSection .form-group input,
+.settingsModal .modalSection .form-group select,
+.settingsModal .modalSection .form-group textarea {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--col-01);
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.settingsModal .modalSection .form-group input:focus,
+.settingsModal .modalSection .form-group select:focus,
+.settingsModal .modalSection .form-group textarea:focus {
+  border-color: var(--col-03);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.settingsModal .modalSection .sectionFooter {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.settingsModal .modalSection .btnSave,
+.settingsModal .modalSection .btnCancel {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.settingsModal .modalSection .btnSave {
+  background-color: var(--col-03);
+  color: var(--col-01);
+}
+.settingsModal .modalSection .btnSave:hover {
+  background-color: #ff8c33;
+}
+
+.settingsModal .modalSection .btnCancel {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--col-01);
+}
+
+.settingsModal .modalSection .btnCancel:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Scrollbar */
+.settingsModal .modalSection::-webkit-scrollbar {
+  width: 6px;
+}
+
+.settingsModal .modalSection::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 3px;
+}

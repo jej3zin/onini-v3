@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onini | Perfil</title>
+    <link rel="icon" href="/public/asset/id/VI - Icon_Girl.webp" />
+    <!-- Style -->
+    <link rel="stylesheet" href="/public/asset/src/css/index.css" />
+    <link rel="stylesheet" href="/public/asset/src/css/app.css" />
+    <link rel="stylesheet" href="/public/asset/src/css/loader.css" />
+    <link rel="stylesheet" href="/public/asset/src/css/head.css" />
+    <link rel="stylesheet" href="/public/asset/src/css/foot.css" />
+    <link rel="stylesheet" href="/profile/index.css" />
+
+    <!-- Script Externo -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      defer
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div id="preloader">
+      <span class="spinner"></span>
+    </div>
+
+    <div id="content">
+      <header class="head">
+        <div class="headBox-Left">
+          <img src="/public/asset/id/Logotipo.webp" alt="" />
+        </div>
+
+        <div class="headBox-Right">
+          <div class="boxSearch">
+            <label for="searchInput" class="sr-only">Buscar</label>
+
+            <ion-icon name="search" class="search-icon"></ion-icon>
+            <input
+              type="search"
+              id="searchInput"
+              name="search"
+              placeholder="Buscar..."
+              autocomplete="off"
+            />
+            <ion-icon name="close-circle" class="clear-icon"></ion-icon>
+          </div>
+
+          <div id="searchResults" class="search-results"></div>
+
+          <button id="btnUser" class="BtnUser-2">
+            <img src="/public/asset/id/Yoru-Square.webp" alt="Avatar" />
+          </button>
+        </div>
+      </header>
+
+      <!-- Dropdown Prolile -->
+      <div class="profileDropdown" id="profileDropdown">
+        <div class="banner"></div>
+
+        <div class="userInfo">
+          <img
+            class="avatar"
+            src="/public/asset/id/Yoru-Square.webp"
+            alt="Avatar"
+          />
+
+          <div class="username">Oliver</div>
+          <div class="bio">Vivendo a jornada, criando meu império digital.</div>
+
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-number">0</div>
+              <div class="stat-label">Seguindo</div>
+            </div>
+
+            <div class="stat-item">
+              <div class="stat-number">0</div>
+              <div class="stat-label">Seguidores</div>
+            </div>
+
+            <div class="stat-item">
+              <div class="stat-number" id="statLibrary">0</div>
+              <div class="stat-label">Biblioteca</div>
+            </div>
+
+            <div class="stat-item">
+              <div class="stat-number" id="statFav">0</div>
+              <div class="stat-label">Favoritos</div>
+            </div>
+          </div>
+
+          <button class="viewProfileBtn">Ver perfil</button>
+        </div>
+      </div>
+
+      <!-- MODAL LOGIN -->
+      <div class="modalLogin" id="modalLogin" aria-hidden="true">
+        <div class="modalWrapper" role="dialog" aria-modal="true">
+          <button class="closeModal" id="closeModal" aria-label="Fechar modal">
+            <ion-icon name="close"></ion-icon>
+          </button>
+
+          <form id="loginForm" method="get" novalidate>
+            <header class="formhead">
+              <img
+                class="logotipoform"
+                src="/public/asset/id/Logotipo.webp"
+                alt="Logotipo do site"
+              />
+            </header>
+
+            <div class="boxSquad">
+              <label class="inputText" for="email">
+                <ion-icon name="mail"></ion-icon> Email:
+              </label>
+              <input
+                class="inputBar"
+                id="email"
+                type="email"
+                name="email"
+                required
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="boxSquad">
+              <label class="inputText" for="password">
+                <ion-icon name="lock-closed"></ion-icon> Senha:
+              </label>
+              <input
+                class="inputBar"
+                id="password"
+                type="password"
+                name="password"
+                required
+                autocomplete="current-password"
+              />
+            </div>
+
+            <div class="boxButton">
+              <button type="submit" name="login">Entrar</button>
+            </div>
+
+            <p class="switchLink" id="openRegister">
+              <ion-icon name="person-circle"></ion-icon>Criar conta
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <!-- MODAL REGISTER -->
+      <div class="modalRegister" id="modalRegister" aria-hidden="true">
+        <div class="modalWrapper" role="dialog" aria-modal="true">
+          <button
+            class="closeModal"
+            id="closeRegister"
+            aria-label="Fechar modal"
+          >
+            <ion-icon name="close"></ion-icon>
+          </button>
+
+          <form id="registerForm" method="get" novalidate>
+            <div class="boxSquad">
+              <label class="inputText" for="regName">
+                <ion-icon name="person"></ion-icon> Nome:
+              </label>
+              <input
+                class="inputBar"
+                id="regName"
+                type="text"
+                name="name"
+                required
+                autocomplete="name"
+              />
+            </div>
+
+            <div class="boxSquad">
+              <label class="inputText" for="regEmail">
+                <ion-icon name="mail"></ion-icon> Email:
+              </label>
+              <input
+                class="inputBar"
+                id="regEmail"
+                type="email"
+                name="email"
+                required
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="boxSquad">
+              <label class="inputText" for="regPass">
+                <ion-icon name="lock-closed"></ion-icon> Senha:
+              </label>
+              <input
+                class="inputBar"
+                id="regPass"
+                type="password"
+                name="password"
+                required
+                autocomplete="new-password"
+              />
+            </div>
+
+            <div class="boxButton">
+              <button type="submit">Criar conta</button>
+            </div>
+
+            <p class="switchLink" id="openLogin">
+              <ion-icon name="person-circle"></ion-icon>Já tenho conta
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Edit profile modal -->
+      <div
+        id="editModal"
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        style="z-index: 10000"
+      >
+        <div class="modal-content" role="document">
+          <button class="modal-close" aria-label="Fechar edição">
+            <ion-icon name="close"></ion-icon>
+          </button>
+          <h2 class="modal-title">Editar perfil</h2>
+
+          <div class="profile-edit-form">
+            <div class="form-group">
+              <label for="editName">Nome</label>
+              <input id="editName" type="text" class="input" />
+            </div>
+
+            <div class="form-group">
+              <label for="editBio">Bio</label>
+              <textarea id="editBio" rows="3" class="textarea"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="editAvatar">Avatar URL</label>
+              <input id="editAvatar" type="text" class="input" />
+            </div>
+
+            <div class="form-group">
+              <label for="editBanner">Banner URL</label>
+              <input id="editBanner" type="text" class="input" />
+            </div>
+
+            <div class="form-group">
+              <label for="editFavs">Favoritos</label>
+              <input id="editFavs" type="text" class="input" />
+            </div>
+
+            <div class="form-actions">
+              <button class="btn cancel" id="cancelEdit">Cancelar</button>
+              <button class="btn save" id="saveEdit">Salvar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main class="main">
+        <div class="container">
+          <!-- Profile header -->
+          <div class="profile-header" id="profileHeader">
+            <div
+              class="profile-banner"
+              id="profileBanner"
+              style="background-image: url('/public/asset/id/Yoru-Banner.webp')"
+            ></div>
+
+            <div class="profile-body">
+              <div class="profileAvatar" id="profileAvatar">
+                <img src="/public/asset/id/Yoru-Square.webp" alt="avatar" />
+              </div>
+
+              <div class="profile-info">
+                <div style="display: flex; align-items: center; gap: 12px">
+                  <div class="profile-name">
+                    <h1 id="profileName">Usuário</h1>
+                    <div class="role" id="profileRole">Membro</div>
+                  </div>
+
+                  <div class="profile-actions" style="margin-left: auto">
+                    <button class="btn" id="editProfileBtn">
+                      <ion-icon name="create"></ion-icon> Editar
+                    </button>
+                    <button class="btn primary" id="followBtn">
+                      <ion-icon name="person-add"></ion-icon> Seguir
+                    </button>
+                  </div>
+                </div>
+
+                <div class="profile-meta" id="profileMeta">
+                  Desde Jan 2025 • Brasil
+                </div>
+                <div class="profile-bio" id="profileBio">
+                  Aqui vai uma bio do usuário. Curtir animes e construir coisas.
+                </div>
+
+                <div class="stats">
+                  <div class="stat">
+                    <strong id="statFollowing">0</strong><span>Seguindo</span>
+                  </div>
+                  <div class="stat">
+                    <strong id="statFollowers">0</strong><span>Seguidores</span>
+                  </div>
+                  <div class="stat">
+                    <strong id="statPosts">0</strong><span>Posts</span>
+                  </div>
+                  <div class="stat">
+                    <strong id="statLibrary">0</strong><span>Biblioteca</span>
+                  </div>
+
+                  <section class="friends">
+                    <h3 class="friends-title">Amigos</h3>
+
+                    <div class="friends-grid" id="friendsGrid">
+                      <!-- JS injeta os amigos aqui -->
+                    </div>
+                  </section>
+                </div>
+
+                <div class="tabs" id="profileTabs">
+                  <button class="tab active" data-tab="overview">
+                    Visão geral
+                  </button>
+                  <button class="tab" data-tab="favorites">Favoritos</button>
+                  <button class="tab" data-tab="stats">Estatísticas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sections -->
+          <section class="section" id="tabContent">
+            <!-- Overview content -->
+            <div data-panel="overview">
+              <h3>Feed</h3>
+              <div id="profileFeed" class="feed-grid"></div>
+              <p id="feedEmpty" class="empty-feedback" style="display: none">
+                Nenhum post ainda.
+              </p>
+            </div>
+
+            <!-- Library -->
+            <div data-panel="library" style="display: none">
+              <h3>Biblioteca</h3>
+
+              <div class="lib-filter">
+                <button class="lib-btn active" data-filter="recentes">
+                  Recentes
+                </button>
+                <button class="lib-btn" data-filter="favoritos">
+                  Favoritos
+                </button>
+              </div>
+
+              <div id="libraryGrid" class="cards-grid"></div>
+
+              <p id="libraryEmpty" class="empty-feedback" style="display: none">
+                Nada por aqui ainda.
+              </p>
+            </div>
+
+            <!-- Stats -->
+            <div data-panel="stats" style="display: none">
+              <h3>Estatísticas</h3>
+              <p class="empty-feedback">Estatísticas serão mostradas aqui.</p>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- LOGO + descrição -->
+          <div class="footer-col brand">
+            <img
+              src="/public/asset/id/Logotipo.webp"
+              alt="Logo"
+              class="footer-logo"
+            />
+            <p>Seu portal para animes, mangás e novidades da comunidade.</p>
+          </div>
+
+          <!-- Navegação -->
+          <div class="footer-col">
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="#">Início</a></li>
+              <li><a href="#">Trending</a></li>
+              <li><a href="#">Lançamentos</a></li>
+              <li><a href="#">Calendário</a></li>
+            </ul>
+          </div>
+
+          <!-- Categorias -->
+          <div class="footer-col">
+            <h3>Categorias</h3>
+            <ul>
+              <li><a href="#">Ação</a></li>
+              <li><a href="#">Romance</a></li>
+              <li><a href="#">Fantasia</a></li>
+              <li><a href="#">Slice of Life</a></li>
+            </ul>
+          </div>
+
+          <!-- Social -->
+          <div class="footer-col">
+            <h3>Conecte-se</h3>
+            <div class="footer-social">
+              <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+              <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+              <a href="#"><ion-icon name="logo-discord"></ion-icon></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2025 - 2027 Onini • Todos os direitos reservados.</p>
+        </div>
+      </footer>
+    </div>
+
+    <div class="popup-error" id="popupError">
+      <ion-icon name="alert-circle"></ion-icon>
+      <span id="popupMessage">Erro no login!</span>
+    </div>
+
+    <div class="popup-success" id="popupSuccess">
+      <ion-icon name="checkmark-circle"></ion-icon>
+      <span id="popupSuccessMessage">Sucesso!</span>
+    </div>
+
+    <div
+      id="animeModal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      aria-describedby="modalDescription"
+    >
+      <div class="modal-content-Anime">
+        <button class="modal-close" aria-label="Fechar modal">
+          <ion-icon name="close"></ion-icon>
+        </button>
+        <div class="modal-header">
+          <div class="modal-space-image">
+            <img src="" alt="Capa" class="modal-cover" />
+          </div>
+
+          <div class="modal-texts">
+            <h2 id="modalTitle" class="modal-title">Título</h2>
+            <h3 class="modal-alt-title">Título alternativo</h3>
+            <p id="modalDescription" class="modal-synopsis">Sinopse</p>
+          </div>
+        </div>
+
+        <div class="modal-footer-Anime">
+          <div class="modal-infos-Anime">
+            <p class="modal-score">Avaliação: -</p>
+            <p class="modal-tags">Tags: -</p>
+          </div>
+
+          <div class="modal-actions">
+            <button class="modal-btn primary saveAnimeBtn">
+              <ion-icon name="bookmark"></ion-icon>
+            </button>
+            <button class="modal-btn discardAnimeBtn">
+              <ion-icon name="trash-bin"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/public/asset/src/js/login.js"></script>
+    <script type="module" src="/public/asset/src/js/jikan/jikan.js"></script>
+    <script type="module" src="/public/asset/src/header/search.js"></script>
+    <script
+      type="module"
+      src="/public/asset/src/js/complemets/popups.js"
+    ></script>
+    <script type="module" src="/public/asset/src/js/loader.js"></script>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

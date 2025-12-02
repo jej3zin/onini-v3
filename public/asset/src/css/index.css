@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif+Display:ital,wdth,wght@0,62.5,100..900;1,62.5,100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Fira Sans', Arial, Helvetica, sans-serif;
+}
+:root {
+  --col-01: #eee;
+  --col-02: #222;
+  --col-02-2: #111;
+
+  --col-03: #ff7600;
+  --col-03-2: #703400;
+  --col-03-3: rgba(255, 119, 0, 0.25);
+  --col-red-01: #b33a36;
+  --col-red-02: #c9302c;
+  --col-green: #aaa;
+
+  --bg-02: rgba(34, 34, 34, 0.5);
+  --text-hover: rgba(255, 119, 0, 0.15);
+
+  --headIcon-01: 1.25rem;
+
+  --ani-01: 0.3s all ease;
+
+  --shadown-header: 0 8px 12px 3px rgba(0, 0, 0, 0.5);
+  --border-search: 1px solid rgba(255, 255, 255, 0.15);
+  --bg-search: rgba(255, 255, 255, 0.06);
+  --search-01: rgba(255, 255, 255, 0.12);
+  --search-02: rgba(255, 255, 255, 0.25);
+  --search-03: rgba(255, 255, 255, 0.18);
+  --search-04: rgba(255, 255, 255, 0.4);
+  --search-05: rgba(255, 255, 255, 0.55);
+  --result-01: rgba(255, 255, 255, 0.08);
+}
+/* === LIGHT THEME (LIMPO E COERENTE) === */
+[data-theme='light'] {
+  /* Texto e ícones */
+  --col-01: #222; /* Texto principal */
+  --col-02: #f7f7f7; /* BG principal claro */
+  --col-02-2: #ffffff; /* BG caixas / header */
+
+  /* Laranja */
+  --col-03: #ff7600; /* Primária */
+  --col-03-2: #9b4f00; /* Escurecida */
+  -col-03-3: rgba(255, 119, 0, 0.25);
+  --col-red-01: #b33a36;
+  --col-red-02: #c9302c;
+  --col-green: #aaa;
+
+  /* Hovers e fundos */
+  --text-hover: rgba(255, 119, 0, 0.15);
+  --bg-02: rgba(0, 0, 0, 0.05); /* fundos translúcidos */
+
+  /* Sombra adaptada pra light */
+  --shadown-header: 0 8px 12px 3px rgba(0, 0, 0, 0.12);
+  --border-search: 1px solid rgba(0, 0, 0, 0.15);
+  --bg-search: rgba(0, 0, 0, 0.06);
+  --search-01: rgba(0, 0, 0, 0.12);
+  --search-02: rgba(0, 0, 0, 0.25);
+  --search-03: rgba(0, 0, 0, 0.18);
+  --search-04: rgba(0, 0, 0, 0.4);
+  --search-05: rgba(0, 0, 0, 0.55);
+  --result-01: rgba(0, 0, 0, 0.08);
+}
+
+/* Body & Complements */
+body {
+  padding-top: 9.5vh;
+  background-color: var(--col-02);
+  transition: var(--ani-01);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.5rem;
+  background: var(--col-02);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background: var(--col-03);
+}
+/* Selection */
+::selection {
+  color: var(--col-03);
+  background: var(--col-02-2);
+}
+/* Remove o X padrão do navegador */
+.boxSearch input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}

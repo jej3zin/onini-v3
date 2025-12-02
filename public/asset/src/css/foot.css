@@ -1,0 +1,105 @@
+/* ===== FOOTER ===== */
+.footer {
+  width: 100%;
+  margin-top: 5rem;
+  padding: 3rem 5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+/* Container principal */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+/* Colunas */
+.footer-col {
+  min-width: 12rem;
+}
+
+.footer-col h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--col-01);
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-col ul li a {
+  color: var(--col-01);
+  opacity: 0.8;
+  font-size: 0.95rem;
+  transition: var(--ani-01);
+}
+
+.footer-col ul li a:hover {
+  opacity: 1;
+  color: var(--col-03);
+}
+
+/* Logo + descrição */
+.footer-logo {
+  width: 120px;
+  margin-bottom: 1rem;
+  opacity: 0.95;
+}
+
+.footer-col.brand p {
+  color: var(--col-01);
+  opacity: 0.75;
+  max-width: 280px;
+  font-size: 0.95rem;
+}
+
+/* Redes sociais */
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social a {
+  font-size: 1.5rem;
+  color: var(--col-01);
+  opacity: 0.8;
+  transition: var(--ani-01);
+}
+
+.footer-social a:hover {
+  opacity: 1;
+  color: var(--col-03);
+}
+
+/* Bottom */
+.footer-bottom {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: var(--col-01);
+  opacity: 0.6;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2.5rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+  }
+}

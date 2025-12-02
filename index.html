@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onini | Welcome</title>
+    <link rel="icon" href="/public/asset/id/VI - Icon_Girl.webp" />
+    <!-- Style -->
+    <link rel="stylesheet" href="/public/asset/src/css/index.css" />
+    <link rel="stylesheet" href="/public/asset/src/css/app.css" />
+    <link rel="stylesheet" href="/public/asset/src/css/loader.css" />
+    <link rel="stylesheet" href="/public/asset/src/css/head.css" />
+    <!-- Script -->
+    <script
+      type="module"
+      src="/public/asset/src/js/complemets/popups.js"
+    ></script>
+
+    <!-- Script Externo -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      defer
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div id="preloader">
+      <span class="loader"></span>
+    </div>
+
+    <div id="content">
+      <header class="head">
+        <div class="headBox-Left">
+          <img src="/public/asset/id/Logotipo.webp" alt="" />
+        </div>
+
+        <div class="headBox-Right">
+          <!-- <div class="boxSearch">
+            <input type="search" name="" id="" />
+          </div> -->
+
+          <button class="BtnUser">
+            <ion-icon name="person" class="headIcons"></ion-icon>
+          </button>
+        </div>
+      </header>
+
+      <!-- MODAL LOGIN -->
+      <div class="modalLogin" id="modalLogin" aria-hidden="true">
+        <div class="modalWrapper" role="dialog" aria-modal="true">
+          <button class="closeModal" id="closeModal" aria-label="Fechar modal">
+            <ion-icon name="close"></ion-icon>
+          </button>
+
+          <form id="loginForm" method="get" novalidate>
+            <header class="formhead">
+              <img
+                class="logotipoform"
+                src="/public/asset/id/Logotipo.webp"
+                alt="Logotipo do site"
+              />
+            </header>
+
+            <div class="boxSquad">
+              <label class="inputText" for="email">
+                <ion-icon name="mail"></ion-icon> Email:
+              </label>
+              <input
+                class="inputBar"
+                id="email"
+                type="email"
+                name="email"
+                required
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="boxSquad">
+              <label class="inputText" for="password">
+                <ion-icon name="lock-closed"></ion-icon> Senha:
+              </label>
+              <input
+                class="inputBar"
+                id="password"
+                type="password"
+                name="password"
+                required
+                autocomplete="current-password"
+              />
+            </div>
+
+            <div class="boxButton">
+              <button type="submit" name="login">Entrar</button>
+            </div>
+
+            <p class="switchLink" id="openRegister">
+              <ion-icon name="person-circle"></ion-icon>Criar conta
+            </p>
+          </form>
+
+          <a href="/pages/home.html">Entre como visitante</a>
+        </div>
+      </div>
+
+      <!-- MODAL REGISTER -->
+      <div class="modalRegister" id="modalRegister" aria-hidden="true">
+        <div class="modalWrapper" role="dialog" aria-modal="true">
+          <button
+            class="closeModal"
+            id="closeRegister"
+            aria-label="Fechar modal"
+          >
+            <ion-icon name="close"></ion-icon>
+          </button>
+
+          <form id="registerForm" method="get" novalidate>
+            <header class="formhead">
+              <img
+                class="logotipoform"
+                src="/public/asset/id/Logotipo.webp"
+                alt="Logotipo do site"
+              />
+            </header>
+            <div class="boxSquad">
+              <label class="inputText" for="regName">
+                <ion-icon name="person"></ion-icon> Nome:
+              </label>
+              <input
+                class="inputBar"
+                id="regName"
+                type="text"
+                name="name"
+                required
+                autocomplete="name"
+              />
+            </div>
+
+            <div class="boxSquad">
+              <label class="inputText" for="regEmail">
+                <ion-icon name="mail"></ion-icon> Email:
+              </label>
+              <input
+                class="inputBar"
+                id="regEmail"
+                type="email"
+                name="email"
+                required
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="boxSquad">
+              <label class="inputText" for="regPass">
+                <ion-icon name="lock-closed"></ion-icon> Senha:
+              </label>
+              <input
+                class="inputBar"
+                id="regPass"
+                type="password"
+                name="password"
+                required
+                autocomplete="new-password"
+              />
+            </div>
+
+            <div class="boxButton">
+              <button type="submit">Criar conta</button>
+            </div>
+
+            <p class="switchLink" id="openLogin">
+              <ion-icon name="person-circle"></ion-icon>Já tenho conta
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <main class="mainIndex">
+        <div class="Content">
+          <h1>Onini-san!</h1>
+          <p>Bem-vindos a maior site da comunidade Otaku.</p>
+        </div>
+        <footer class="mainIndexFoot">
+          <p>Copyright &copy; 2025 - 2027</p>
+        </footer>
+      </main>
+    </div>
+
+    <div class="popup-error" id="popupError">
+      <ion-icon name="alert-circle"></ion-icon>
+      <span id="popupMessage">Erro no login!</span>
+    </div>
+
+    <div class="popup-success" id="popupSuccess">
+      <ion-icon name="checkmark-circle"></ion-icon>
+      <span id="popupSuccessMessage">Sucesso!</span>
+    </div>
+
+    <script type="module" src="/public/asset/src/js/loader.js"></script>
+    <script src="/public/asset/src/js/login.js"></script>
+    <script type="module" src="/public/asset/src/js/jikan/jikan.js"></script>
+  </body>
+</html>

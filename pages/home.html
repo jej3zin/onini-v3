@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Onini | Home</title>
+    <link rel="icon" href="/public/asset/id/VI - Icon_Girl.webp" />
+    <!-- Style -->
+    <link rel="stylesheet" href="/public/asset/src/css/index.css" />
+    <link rel="stylesheet" href="/public/asset/src/css/app.css" />
+    <link rel="stylesheet" href="/public/asset/src/css/loader.css" />
+    <link rel="stylesheet" href="/public/asset/src/css/head.css" />
+    <link rel="stylesheet" href="/public/asset/src/css/foot.css" />
+    <link rel="stylesheet" href="/public/asset/src/css/modals.css" />
+
+    <!-- Script Externo -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      defer
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div id="preloader">
+      <span class="spinner"></span>
+    </div>
+
+    <div id="content">
+      <header class="head">
+        <div class="headBox-Left">
+          <img src="/public/asset/id/Logotipo.webp" alt="" />
+
+          <nav class="nav">
+            <ul class="nav-list">
+              <li><a class="" href="home.html">Home</a></li>
+              <li><a class="" href="launch.html">Lançamentos</a></li>
+              <li><a class="" href="news.html">Noticías</a></li>
+              <li class="dropdown">
+                <a href="#">Categorias</a>
+                <div class="dropdown-menu">
+                  <div class="flexcontent">
+                    <div class="dropdown-column">
+                      <strong>A</strong>
+                      <a href="#">Ação</a>
+                      <a href="#">Aventura</a>
+                    </div>
+                    <div class="dropdown-column">
+                      <strong>B</strong>
+                      <a href="#">Biografia</a>
+                    </div>
+                    <div class="dropdown-column">
+                      <strong>C</strong>
+                      <a href="#">Comédia</a>
+                      <a href="#">Crime</a>
+                    </div>
+                    <div class="dropdown-column">
+                      <strong>D</strong>
+                      <a href="#">Documentário</a>
+                      <a href="#">Drama</a>
+                    </div>
+                    <div class="dropdown-column">
+                      <strong>E</strong>
+                      <a href="#">Espionagem</a>
+                    </div>
+                    <div class="dropdown-column">
+                      <strong>F</strong>
+                      <a href="#">Família</a>
+                      <a href="#">Fantasia</a>
+                      <a href="#">Ficção Científica</a>
+                    </div>
+                    <div class="dropdown-column">
+                      <strong>H</strong>
+                      <a href="#">História</a>
+                      <a href="#">Horror</a>
+                    </div>
+                    <div class="dropdown-column">
+                      <strong>I</strong>
+                      <a href="#">Infantil</a>
+                    </div>
+                    <div class="dropdown-column">
+                      <strong>M</strong>
+                      <a href="#">Mistério</a>
+                      <a href="#">Musical</a>
+                    </div>
+                    <div class="dropdown-column">
+                      <strong>R</strong>
+                      <a href="#">Romance</a>
+                    </div>
+                    <div class="dropdown-column">
+                      <strong>S</strong>
+                      <a href="#">Suspense</a>
+                      <a href="#">Thriller</a>
+                      <a href="#">Terror</a>
+                    </div>
+                    <div class="dropdown-column">
+                      <strong>W</strong>
+                      <a href="#">Western</a>
+                    </div>
+                    <div class="dropdown-column">
+                      <strong>Z</strong>
+                      <a href="#">Zumbi</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="headBox-Right">
+          <div class="boxSearch">
+            <label for="searchInput" class="sr-only">Buscar</label>
+
+            <ion-icon name="search" class="search-icon"></ion-icon>
+            <input
+              type="search"
+              id="searchInput"
+              name="search"
+              placeholder="Buscar..."
+              autocomplete="off"
+            />
+            <ion-icon name="close-circle" class="clear-icon"></ion-icon>
+          </div>
+
+          <div id="searchResults" class="search-results"></div>
+
+          <button id="btnUser" class="BtnUser-2">
+            <img src="/public/asset/id/Yoru-Square.webp" alt="Avatar" />
+          </button>
+        </div>
+      </header>
+
+      <!-- Dropdown Profile -->
+      <div class="profileDropdown" id="profileDropdown">
+        <!-- Header -->
+        <div class="banner"></div>
+
+        <!-- Main -->
+        <header class="dd_header-user">
+          <img
+            class="avatar"
+            src="/public/asset/id/Yoru-Square.webp"
+            alt="Avatar"
+          />
+          <div class="username">Usuario</div>
+          <div class="bio">Escreva algo.</div>
+        </header>
+        <!-- 
+        <main class="dd_mainuser">
+          <div class="stats">
+            <div class="stat-item">
+              <div class="stat-number">0</div>
+              <div class="stat-label">Seguindo</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">0</div>
+              <div class="stat-label">Seguidores</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">0</div>
+              <div class="stat-label">Biblioteca</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">0</div>
+              <div class="stat-label">Favoritos</div>
+            </div>
+          </div>
+        </main>
+        -->
+
+        <!-- Footer -->
+        <footer class="dd_Footer-user">
+          <ul>
+            <li>
+              <button class="viewProfileBtn">
+                <ion-icon name="person"></ion-icon>Ver perfil
+              </button>
+            </li>
+            <li>
+              <a href="#"><ion-icon name="heart"></ion-icon>Preferências</a>
+            </li>
+            <li>
+              <a href="#"><ion-icon name="language"></ion-icon>linguagem</a>
+            </li>
+            <li>
+              <button id="toggleThemeBtnFooter">
+                <ion-icon name="moon"></ion-icon> Dark /
+                <ion-icon name="sunny"></ion-icon>Light
+              </button>
+            </li>
+            <li>
+              <a id="logoutBtn"><ion-icon name="log-out"></ion-icon>Sair</a>
+            </li>
+          </ul>
+        </footer>
+      </div>
+
+      <!-- MODAL LOGIN -->
+      <div class="modalLogin" id="modalLogin" aria-hidden="true">
+        <div class="modalWrapper" role="dialog" aria-modal="true">
+          <button class="closeModal" id="closeModal" aria-label="Fechar modal">
+            <ion-icon name="close"></ion-icon>
+          </button>
+
+          <form id="loginForm" method="get" novalidate>
+            <header class="formhead">
+              <img
+                class="logotipoform"
+                src="/public/asset/id/Logotipo.webp"
+                alt="Logotipo do site"
+              />
+            </header>
+
+            <div class="boxSquad">
+              <label class="inputText" for="email">
+                <ion-icon name="mail"></ion-icon> Email:
+              </label>
+              <input
+                class="inputBar"
+                id="email"
+                type="email"
+                name="email"
+                required
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="boxSquad">
+              <label class="inputText" for="password">
+                <ion-icon name="lock-closed"></ion-icon> Senha:
+              </label>
+              <input
+                class="inputBar"
+                id="password"
+                type="password"
+                name="password"
+                required
+                autocomplete="current-password"
+              />
+            </div>
+
+            <div class="boxButton">
+              <button type="submit" name="login">Entrar</button>
+            </div>
+
+            <p class="switchLink" id="openRegister">
+              <ion-icon name="person-circle"></ion-icon>Criar conta
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <!-- MODAL REGISTER -->
+      <div class="modalRegister" id="modalRegister" aria-hidden="true">
+        <div class="modalWrapper" role="dialog" aria-modal="true">
+          <button
+            class="closeModal"
+            id="closeRegister"
+            aria-label="Fechar modal"
+          >
+            <ion-icon name="close"></ion-icon>
+          </button>
+
+          <form id="registerForm" method="get" novalidate>
+            <div class="boxSquad">
+              <label class="inputText" for="regName">
+                <ion-icon name="person"></ion-icon> Nome:
+              </label>
+              <input
+                class="inputBar"
+                id="regName"
+                type="text"
+                name="name"
+                required
+                autocomplete="name"
+              />
+            </div>
+
+            <div class="boxSquad">
+              <label class="inputText" for="regEmail">
+                <ion-icon name="mail"></ion-icon> Email:
+              </label>
+              <input
+                class="inputBar"
+                id="regEmail"
+                type="email"
+                name="email"
+                required
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="boxSquad">
+              <label class="inputText" for="regPass">
+                <ion-icon name="lock-closed"></ion-icon> Senha:
+              </label>
+              <input
+                class="inputBar"
+                id="regPass"
+                type="password"
+                name="password"
+                required
+                autocomplete="new-password"
+              />
+            </div>
+
+            <div class="boxButton">
+              <button type="submit">Criar conta</button>
+            </div>
+
+            <p class="switchLink" id="openLogin">
+              <ion-icon name="person-circle"></ion-icon>Já tenho conta
+            </p>
+          </form>
+        </div>
+      </div>
+
+      <main class="main">
+        <div class="slide-wrapper">
+          <div class="slideModal"></div>
+        </div>
+
+        <section data-type="season" class="slide-section lauch-slide">
+          <h1>lançamentos</h1>
+
+          <button class="arrow left" type="button">
+            <ion-icon name="chevron-back"></ion-icon>
+          </button>
+          <button class="arrow right" type="button">
+            <ion-icon name="chevron-forward"></ion-icon>
+          </button>
+
+          <div class="slide-shell">
+            <div class="slide-01" id="slide-season"></div>
+          </div>
+        </section>
+
+        <section data-type="treding" class="slide-section trending-slide">
+          <h1>Treding</h1>
+
+          <button class="arrow left" type="button">
+            <ion-icon name="chevron-back"></ion-icon>
+          </button>
+          <button class="arrow right" type="button">
+            <ion-icon name="chevron-forward"></ion-icon>
+          </button>
+
+          <div class="slide-shell">
+            <div class="slide-01" id="slide-trending"></div>
+          </div>
+        </section>
+
+        <section data-type="year-2025" class="slide-section year-2025-slide">
+          <h1>Animes do Ano 2025</h1>
+
+          <button class="arrow left" type="button">
+            <ion-icon name="chevron-back"></ion-icon>
+          </button>
+          <button class="arrow right" type="button">
+            <ion-icon name="chevron-forward"></ion-icon>
+          </button>
+
+          <div class="slide-shell">
+            <div class="slide-01" id="slide-2025"></div>
+          </div>
+        </section>
+
+        <section
+          data-type="top-raded"
+          class="slide-section top-community-slide"
+        >
+          <h1>Mais Votados da Comunidade</h1>
+
+          <button class="arrow left" type="button">
+            <ion-icon name="chevron-back"></ion-icon>
+          </button>
+          <button class="arrow right" type="button">
+            <ion-icon name="chevron-forward"></ion-icon>
+          </button>
+
+          <div class="slide-shell">
+            <div class="slide-01" id="slide-top"></div>
+          </div>
+        </section>
+
+        <section data-type="recent" class="slide-section recent-added-slide">
+          <h1>Recentimente adicionados</h1>
+
+          <button class="arrow left" type="button">
+            <ion-icon name="chevron-back"></ion-icon>
+          </button>
+          <button class="arrow right" type="button">
+            <ion-icon name="chevron-forward"></ion-icon>
+          </button>
+
+          <div class="slide-shell">
+            <div class="slide-01" id="slide-recent"></div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-container">
+          <!-- LOGO + descrição -->
+          <div class="footer-col brand">
+            <img
+              src="/public/asset/id/Logotipo.webp"
+              alt="Logo"
+              class="footer-logo"
+            />
+            <p>Seu portal para animes, mangás e novidades da comunidade.</p>
+          </div>
+
+          <!-- Navegação -->
+          <div class="footer-col">
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="home.html">Início</a></li>
+              <li><a href="#">Trending</a></li>
+              <li><a href="launch.html">Lançamentos</a></li>
+              <li><a href="#">Calendário</a></li>
+            </ul>
+          </div>
+
+          <!-- Categorias -->
+          <div class="footer-col">
+            <h3>Categorias</h3>
+            <ul>
+              <li><a href="#">Ação</a></li>
+              <li><a href="#">Romance</a></li>
+              <li><a href="#">Fantasia</a></li>
+              <li><a href="#">Slice of Life</a></li>
+            </ul>
+          </div>
+
+          <!-- Social -->
+          <div class="footer-col">
+            <h3>Conecte-se</h3>
+            <div class="footer-social">
+              <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+              <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+              <a href="#"><ion-icon name="logo-discord"></ion-icon></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2025 - 2027 Onini • Todos os direitos reservados.</p>
+        </div>
+      </footer>
+    </div>
+
+    <div class="popup-error" id="popupError">
+      <ion-icon name="alert-circle"></ion-icon>
+      <span id="popupMessage">Erro no login!</span>
+    </div>
+
+    <div class="popup-success" id="popupSuccess">
+      <ion-icon name="checkmark-circle"></ion-icon>
+      <span id="popupSuccessMessage">Sucesso!</span>
+    </div>
+
+    <div
+      id="animeModal"
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      aria-describedby="modalDescription"
+    >
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Fechar modal">
+          <ion-icon name="close"></ion-icon>
+        </button>
+
+        <h2 id="modalTitle" class="modal-title">Título</h2>
+        <h3 class="modal-alt-title">Título alternativo</h3>
+        <p id="modalDescription" class="modal-synopsis">Sinopse</p>
+        <p class="modal-score">Avaliação: -</p>
+        <p class="modal-tags">Tags: -</p>
+      </div>
+    </div>
+
+    <!-- Modal Logout -->
+    <div id="logoutModal" class="logout-modal">
+      <div class="logout-content">
+        <h2>Confirmação de saída</h2>
+        <p>Tem certeza que deseja sair da sua conta?</p>
+
+        <div class="logout-actions">
+          <button id="cancelLogout" class="btn-cancel">Cancelar</button>
+          <button id="confirmLogout" class="btn-confirm">Sair</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/public/asset/src/header/modals.js"></script>
+    <script type="module" src="/public/asset/src/header/head.js"></script>
+    <script src="/public/asset/src/js/login.js"></script>
+    <script type="module" src="/public/asset/src/js/jikan/jikan.js"></script>
+    <script type="module" src="/public/asset/src/header/modals.js"></script>
+    <script
+      type="module"
+      src="/public/asset/src/js/complemets/popups.js"
+    ></script>
+    <script type="module" src="/public/asset/src/js/loader.js"></script>
+  </body>
+</html>
